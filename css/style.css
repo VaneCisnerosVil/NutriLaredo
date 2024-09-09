@@ -557,6 +557,7 @@ button {
 
 .agency figure img {
     filter: drop-shadow(4px 6px 5px #0d03034f);
+    border-radius: 20%;
 }
 
 .play_icon {
@@ -701,7 +702,7 @@ button {
     border-radius: 40px;
 }
 
-.main_form .send_btn {
+.main_form .envio {
     font-size: 16px;
     transition: ease-in all 0.5s;
     background-color: #363636;
@@ -717,7 +718,7 @@ button {
     border-radius: 40px;
 }
 
-.main_form .send_btn:hover {
+.main_form .envio:hover {
     background-color: #fdc001;
     transition: ease-in all 0.5s;
     box-shadow: 0 0 16px 3px #635d5d38;
@@ -1090,7 +1091,7 @@ button {
 /** footer **/
 
 .footer {
-    margin-top: 90px;
+    margin-top: 0px;
     padding-top: 90px;
     background: #2d2d2d;
     text-align: center;
