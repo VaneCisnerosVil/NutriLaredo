@@ -50,6 +50,75 @@ body {
     font-weight: normal;
     overflow-x: hidden;
 }
+table {
+    font-family: arial;
+} 
+
+/* Color de fondo y texto para cada fila */
+.tableprimary {
+    background-color: #CFE2FF; /* Fondo azul */
+    color: rgb(0, 0, 0); /* Texto blanco */
+}
+
+.tablesecondary {
+    background-color: #e0baba; /* Fondo gris */
+    color: rgb(0, 0, 0); /* Texto blanco */
+}
+
+.tablesuccess {
+    background-color: #FFF3CD; /* Fondo verde */
+    color: rgb(0, 0, 0); /* Texto blanco */
+}
+
+.tabledanger {
+    background-color: #b5ffde; /* Fondo rojo */
+    color: rgb(0, 0, 0); /* Texto blanco */
+}
+
+.tablewarning {
+    background-color: #ffc107; /* Fondo amarillo */
+    color: black; /* Texto negro */
+}
+
+/* Estilo general para la tabla */
+.Table_horarios {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Colapsar bordes */
+    margin: 20px 0; /* Márgenes superior e inferior */
+    font-size: 16px; /* Tamaño del texto */
+    font-family: "arial";
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilos para las celdas (td y th) */
+td, th {
+    border: 1px solid #dee2e6; /* Borde entre celdas */
+    padding: 12px; /* Espaciado dentro de las celdas */
+    text-align: center; /* Texto centrado */
+    vertical-align: middle; /* Centrar verticalmente */
+}
+
+/* Ajustar el alto y el ancho de las celdas */
+td, th {
+    height: 50px; /* Alto de las celdas */
+    width: 280px; /* Ancho de las celdas (ajustar según necesidad) */
+}
+
+/* Opcional: cambiar tamaño del texto para los encabezados */
+th {
+    font-size: 18px; /* Tamaño más grande para los encabezados */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Opcional: cambio de estilo para celdas vacías */
+td:empty {
+    background-color: #f8f9fa; /* Fondo gris claro para celdas vacías */
+}
+
+/* Cambiar color al pasar el cursor sobre una fila (opcional) */
+tr:hover {
+    background-color: #f1f1f1; /* Color de fondo al hacer hover */
+}
 
 a {
     color: #1f1f1f;
