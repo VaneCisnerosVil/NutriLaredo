@@ -517,7 +517,7 @@ button {
 }
 
 .slider_main {
-    padding: 80px 0;
+    padding: 0px 0px 80px 0px;
 }
 
 .relative {
@@ -1289,7 +1289,7 @@ ul.top_infomation li a:hover {
     margin-top: 90px;
     padding-top: 50px;
     padding-bottom: 50px;
-    background: #fefefd;
+    background: #2d2d2d;
 }
 
 .follow h3 {
@@ -1324,7 +1324,7 @@ ul.social_icon li a i:hover {
 }
 
 .copyright p {
-    color: #252525;
+    color: white;
     font-size: 17px;
     line-height: 22px;
     text-align: center;
@@ -1333,7 +1333,7 @@ ul.social_icon li a i:hover {
 }
 
 .copyright a {
-    color: #252525;
+    color: white;
 }
 
 .copyright a:hover {
