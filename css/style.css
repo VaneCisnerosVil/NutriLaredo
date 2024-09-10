@@ -745,7 +745,24 @@ figure img:hover{
     height: 89px;
     border-radius: 40px;
 }
+/*codigo de los botones edad y hemoglobina*/
 
+.col-md-12 .opciones .envio{
+    font-size: 16px;
+    transition: ease-in all 0.5s;
+    background-color: #363636;
+    text-transform: uppercase;
+    color: #fff;
+    max-width: 204px;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    height: 61px;
+    line-height: 61px;
+    margin: 0 auto;
+    border-radius: 40px;
+}
+/*fin del codigo*/
 .main_form .envio {
     font-size: 16px;
     transition: ease-in all 0.5s;
@@ -761,7 +778,14 @@ figure img:hover{
     margin: 0 auto;
     border-radius: 40px;
 }
-
+/*pseudoclase de los botones*/
+.opciones .envio:hover{
+    background-color: #fdc001;
+    transition: ease-in all 0.5s;
+    box-shadow: 0 0 16px 3px #635d5d38;
+    color: #fff;
+}
+/*fin de la pseudoclase*/
 .main_form .envio:hover {
     background-color: #fdc001;
     transition: ease-in all 0.5s;
@@ -1364,182 +1388,4 @@ ul.social_icon li a i:hover {
 	margin-top:16px;
 }
 
-
 /*Fin del codigo CSS del icono*/
-/* Añade estos estilos a tu archivo style.css */
-
-/* Estilo del menú desplegable */
-.site-navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .site-navbar ul li {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .site-navbar ul li a {
-    text-decoration: none;
-    padding: 10px 15px;
-    color: #333;
-    font-weight: bold;
-    display: block;
-  }
-  
-  .site-navbar ul li a:hover {
-    background-color: #f8f8f8;
-  }
-  
-  .menus-page .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .menus-page .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .menus-page .dropdown-content li {
-    display: block;
-  }
-  
-  .menus-page .dropdown-content li a {
-    display: block;
-    padding: 10px 15px;
-    color: #333;
-    text-align: left;
-    font-weight: normal;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  
-  .menus-page .dropdown-content li a:hover {
-    background-color: #f1f1f1;
-  }
-  
-  @media (max-width: 768px) {
-    .site-navbar ul li {
-       display: block;
-    }
-  
-    .menus-page .dropdown-content {
-       position: relative;
-       min-width: 100%;
-    }
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;   
-    font-family: 'Poppins', sans-serif; 
-}
-
-
-.card {
-    position: relative;
-    width: 300px;
-    height: 400px;
-}
-
-.card .card_landing {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 5px 10px #000;
-    background: linear-gradient(transparent 80%, #000), var(--i);
-    background-position: center;
-    background-size: cover;
-    z-index: 100;
-}
-
-.card .card_landing h6 {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-size: 25px;
-    color: #fff;
-}
-
-.card .card_info {
-    position: absolute;
-    width: 90%;
-    height: 90%;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    top: 0;
-    margin: auto;
-    padding: 15px;
-    background: #fff;
-    z-index: 90;
-    box-shadow: 0 5px 10px #000;
-    transition: .5s;
-}
-
-.card:hover .card_info {
-    left: 100%;
-}
-
-.card_info .head {
-    padding: 5px 0;
-    border-bottom: solid 1px #bc8811;
-}
-
-.card_info .head .title {
-    font-size: 20px;
-    font-weight: 700;
-    color: #bc8811;
-}
-
-.card_info .head .description {
-    display: flex;
-    gap: 10px;
-}
-
-.card_info .head .description .item {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-}
-
-.card_info .head .description .item i {
-    color: #bc8811;
-    font-size: 15px;
-}
-
-.card_info .head .description .item p {
-    font-size: 13px;
-}
-
-.card_info .content {
-    margin-top: 15px;
-}
-
-.card_info .content .list {
-    padding: 10px 15px;
-}
-
-.card_info .content .list li {
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.card_info .action .btn {
-    padding: 10px;
-    color: #fff;
-    width: 100%;
-    text-decoration: none;
-    text-align: center;
-    background: #bc8811;
-    display: block;
-    margin-top: 10px;
-}
