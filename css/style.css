@@ -745,7 +745,24 @@ figure img:hover{
     height: 89px;
     border-radius: 40px;
 }
+/*codigo de los botones edad y hemoglobina*/
 
+.col-md-12 .opciones .envio{
+    font-size: 16px;
+    transition: ease-in all 0.5s;
+    background-color: #363636;
+    text-transform: uppercase;
+    color: #fff;
+    max-width: 204px;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    height: 61px;
+    line-height: 61px;
+    margin: 0 auto;
+    border-radius: 40px;
+}
+/*fin del codigo*/
 .main_form .envio {
     font-size: 16px;
     transition: ease-in all 0.5s;
@@ -761,7 +778,14 @@ figure img:hover{
     margin: 0 auto;
     border-radius: 40px;
 }
-
+/*pseudoclase de los botones*/
+.opciones .envio:hover{
+    background-color: #fdc001;
+    transition: ease-in all 0.5s;
+    box-shadow: 0 0 16px 3px #635d5d38;
+    color: #fff;
+}
+/*fin de la pseudoclase*/
 .main_form .envio:hover {
     background-color: #fdc001;
     transition: ease-in all 0.5s;
