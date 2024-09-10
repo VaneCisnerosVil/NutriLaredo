@@ -51,7 +51,17 @@
                            <ul>
                               <li><a class="active" href="index.html">Inicio</a></li>
                               <li><a href="nosotros.html">Conoce sobre la anemia</a></li>
-                              <li><a href="menus.html">Menus</a></li>
+                              <!-- Menú desplegable con submenús -->
+                              <li class="dropdown">
+                                 <a class="active" href="menus.html">Menus</a>
+                                 <ul class="dropdown-content">
+                                    <li><a href="gestantes.html"><img src="images/ICONOS DE MENU D/embarazada.png" alt="Gestantes" class="icono"> Gestantes</a></li>
+                                    <li><a href="6a8meses.html"><img src="images/ICONOS DE MENU D/bebe.png" alt="6 - 8 Meses" class="icono">6 - 8 Meses</a></li>
+                                    <li><a href="9a11meses.html"><img src="images/ICONOS DE MENU D/bebe (1).png" alt="9 - 11 Meses" class="icono">9 - 11 Meses</a></li>
+                                    <li><a href="12a23meses.html"><img src="images/ICONOS DE MENU D/bebe (2).png" alt="12 - 23 Meses" class="icono">12 - 23 Meses</a></li>
+                                    <li><a href="24a35meses.html"><img src="images/ICONOS DE MENU D/bebe (3).png" alt="24 - 35 Meses" class="icono">24 - 35 Meses</a></li>
+                                 </ul>
+                              </li> 
                               <li><a href="nutricion.html">Tips</a></li>
                               <li><a href="contactanos.html">Contactanos</a></li>
                               <!--<li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a></li>
@@ -356,66 +366,27 @@
                      <p>inserta el nombre, edad y nivel de hemoglobina del niño</p>
                   </div>
                </div>
-                <!--cambios de seleccion segun su edad y hemoglobina-->
-                <div class="col-md-12">
-                    <div class="opciones d-flex justify-content-between">
-                          <button class="envio" onclick="seleccionarOpcion('edad')">Edad</button>
-                          <button class="envio" onclick="seleccionarOpcion('hemoglobina')">Hemoglobina</button>
-                    </div>
-                    <br>
-                    <form id="request" class="main_form">
-                            <div class="row">
-                                      <div class="col-md-12">
-                                           <input class="form_control" placeholder="Coloca aquí el Nombre" type="text" name="Name" id="nombre"> 
-                                      </div>
-                             <div class="col-md-12 edad">
-                                         <select class="form_control" name="Edad" id="edad">
-                                                       <option value="">Seleccione un rango de edad             </option>
-                                                       <option value="6-8">6-8 meses</option>
-                                                       <option value="9-11">9-11 meses</option>
-                                                       <option value="12-23">12-23 meses</option>
-                                                       <option value="24-35">24-35 meses</option>
-                                          </select>
-                              </div>
-                                      <div class="col-md-12 hemoglobina" style="display:none;">
-                                            <input class="form_control" placeholder="Nivel de Hemoglobina" type="number" name="Hemoglobina" id="hemoglobina">                          
-                                      </div>
-                                      <div class="col-md-12">
-                                            <a href="menu.html" class="envio d-flex align-content-center justify-content-center" onclick="almacenarDatos(event)">Filtrar</a>
-                                      </div>
-                            </div>
-                    </form>
-                </div>
-<!--script para dar funcionalidad a los botones-->
-    <script>
-        let opcionSeleccionada = '';
-
-        function seleccionarOpcion(opcion) {
-            opcionSeleccionada = opcion;
-            document.querySelector('.edad').style.display = 'none';
-            document.querySelector('.hemoglobina').style.display = 'none';
-            document.querySelector('.' + opcion).style.display = 'block';
-        }
-
-        function almacenarDatos(event) {
-            let Nombre = document.getElementById('nombre').value;
-            let Edad = '';
-            let HEMO = '';
-
-            if (opcionSeleccionada === 'edad') {
-                Edad = document.getElementById('edad').value;
-            } else if (opcionSeleccionada === 'hemoglobina') {
-                HEMO = document.getElementById('hemoglobina').value;
-            }
-
-            // Aquí puedes hacer lo que necesites con las variables Nombre, Edad y HEMO
-            console.log('Nombre:', Nombre);
-            console.log('Edad:', Edad);
-            console.log('HEMO:', HEMO);
-
-            // No prevenimos el evento por defecto para permitir la navegación a menu.html
-        }
-    </script>
+               <div class="col-md-12">
+                  <form id="request" class="main_form">
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <input class="form_control" placeholder="Coloca aqui el Nombre" type="type" name=" Name"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="form_control" placeholder="Edad del Niño" type="type" name="Edad"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="form_control" placeholder="Nivel de Hemoglobina" type="type" name="Hemoglobina">                          
+                        </div>
+                        <div class="col-md-12">
+                           <textarea style=" color: #d0d0cf;" class="textarea" placeholder="Message" type="type" name="message"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <a href="menus.html" class="envio d-flex align-content-center justify-content-center" >Filtrar</a>
+                        </div>
+                     </div>
+                  </form>
+               </div>
             </div>
          </div>
       </div>
