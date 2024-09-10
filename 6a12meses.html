@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
    <head>
       <!-- basic -->
       <meta charset="utf-8">
@@ -46,178 +46,514 @@
                      </div>
                   </div>
                   <div class="col-md-9 col-sm-9">
-                    <div class="navbar-area menus-page"> <!-- Añadida la clase `menus-page` -->
-                       <nav class="site-navbar">
-                          <ul>
-                             <li><a href="index.html">Inicio</a></li>
-                             <li><a href="nosotros.html">Nosotros</a></li>
-                             <!-- Menú desplegable con submenús -->
-                             <li class="dropdown">
-                                <a class="active" href="menus.html">Menus</a>
-                                <ul class="dropdown-content">
-                                   <li><a href="6a12meses.html">6 - 12 Meses</a></li>
-                                   <li><a href="12a24meses.html">12 - 24 Meses</a></li>
-                                   <li><a href="24a36meses.html">24 - 36 Meses</a></li>
-                                </ul>
-                             </li>
-                             <li><a href="nutricion.html">Nutrición</a></li>
-                             <li><a href="contactanos.html">Contactanos</a></li>
-                          </ul>
-                          <button class="nav-toggler">
-                             <span></span>
-                          </button>
-                       </nav>
-                    </div>
-                 </div>
-                 
-                 <!-- Estilos adicionales para el menú desplegable -->
-                 <style>
-                    /* Elimina el estilo de lista predeterminado */
+                     <div class="navbar-area menus-page"> <!-- Añadida la clase `menus-page` -->
+                        <nav class="site-navbar">
+                           <ul>
+                              <li><a href="index.html">Inicio</a></li>
+                              <li><a href="nosotros.html">Conoce sobre la anemia</a></li>
+                              <!-- Menú desplegable con submenús -->
+                              <li class="dropdown">
+                                 <a class="active" href="menus.html">Menus</a>
+                                 <ul class="dropdown-content">
+                                    <li><a href="6a12meses.html">6 - 12 Meses</a></li>
+                                    <li><a href="12a24meses.html">12 - 24 Meses</a></li>
+                                    <li><a href="24a36meses.html">24 - 36 Meses</a></li>
+                                 </ul>
+                              </li>
+                              <li><a href="nutricion.html">Tips</a></li>
+                              <li><a href="contactanos.html">Contactanos</a></li>
+                           </ul>
+                           <button class="nav-toggler">
+                              <span></span>
+                           </button>
+                        </nav>
+                     </div>
+                  </div>
+                  
+                  <!-- Estilos adicionales para el menú desplegable -->
+                  <style>
+                     /* Elimina el estilo de lista predeterminado */
 .site-navbar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
 }
 
 /* Alinea los elementos del menú principal en una fila */
 .site-navbar ul li {
-  display: inline-block;
-  position: relative;
+   display: inline-block;
+   position: relative;
 }
 
 /* Estilo para los enlaces del menú principal */
 .site-navbar ul li a {
-  text-decoration: none;
-  padding: 10px 15px;
-  color: #333;
-  font-weight: bold;
-  display: block;
+   text-decoration: none;
+   padding: 10px 15px;
+   color: #333;
+   font-weight: bold;
+   display: block;
 }
 
 /* Efecto hover para los enlaces del menú principal */
 .site-navbar ul li a:hover {
-  background-color: #f8f8f8;
+   background-color: #f8f8f8;
 }
 
 /* Estilo del menú desplegable en la página menus.html */
 .menus-page .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
-  padding: 0;
-  margin: 0;
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+   z-index: 1;
+   padding: 0;
+   margin: 0;
 }
 
 /* Mostrar el menú desplegable cuando el cursor esté sobre el elemento dropdown en la página menus.html */
 .menus-page .dropdown:hover .dropdown-content {
-  display: block;
+   display: block;
 }
 
 /* Estilo de los elementos dentro del menú desplegable */
 .menus-page .dropdown-content li {
-  display: block;
+   display: block;
 }
 
 /* Estilo para los enlaces del submenú */
 .menus-page .dropdown-content li a {
-  display: block;
-  padding: 10px 15px;
-  color: #333;
-  text-align: left;
-  font-weight: normal;
-  text-decoration: none;
-  white-space: nowrap;
+   display: block;
+   padding: 10px 15px;
+   color: #333;
+   text-align: left;
+   font-weight: normal;
+   text-decoration: none;
+   white-space: nowrap;
 }
 
 /* Efecto hover para los enlaces del submenú */
 .menus-page .dropdown-content li a:hover {
-  background-color: #f1f1f1;
+   background-color: #f1f1f1;
 }
 
 /* Ajustes responsivos para pantallas pequeñas */
 @media (max-width: 768px) {
-  .site-navbar ul li {
-     display: block;
-  }
+   .site-navbar ul li {
+      display: block;
+   }
 
-  .menus-page .dropdown-content {
-     position: relative;
-     min-width: 100%; /* Asegura que el menú cubra todo el ancho en dispositivos móviles */
-  }
+   .menus-page .dropdown-content {
+      position: relative;
+      min-width: 100%; /* Asegura que el menú cubra todo el ancho en dispositivos móviles */
+   }
 }
 
-                 </style>
+                  </style>                         
+                  
                </div>
             </div>
          </header>
-         <!-- end header inner -->
-      </div>
-      <!-- end banner -->
-      <!-- services -->
-      <div class="services">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage text_align_center ">
-                     <h2>MENÚS 6 - 12 MESES</h2>
+         <div class="services">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="titlepage text_align_center ">
+                        <h2>MENÚS 6 - 12 MESES</h2>
+                     </div>
                   </div>
                </div>
-            </div>
-            <div class="row">
-               <div class="col-md-4">
-                  <div id="ho_shad" class="services_box text_align_left">
-                     <h3>PURECITO NUTRITIVO</h3>
-                     <figure><img src="images/MENUS/PURECITONUTRITIVO.PNG" alt="#"/></figure>
-                     <p>El bazo es un alimento rico en hierro que ayuda a prevenir la anemia de tu niño/a.</p>
-                     <a class="read_more" href="receta.html">Receta</a>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div id="ho_shad" class="services_box text_align_left">
-                     <h3>SUAVECITO INFANTIL</h3>
-                     <figure><img src="images/MENUS/SUAVECITOINFANTIL.PNG" alt="#"/></figure>
-                     <p>El higado es rico en hierro  te ayudará a prevenir la anemia de tu niño/a.</p>
-                     <a class="read_more" href="receta.html">Receta</a>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div id="ho_shad" class="services_box text_align_left">
-                     <h3>ESPECITO DE BAZO CON CAMOTE</h3>
-                     <figure><img src="images/MENUS/ESPECITODEAZOCONCAMOTE.PNG" alt="#"/></figure>
-                     <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-                     <a class="read_more" href="receta.html">Receta</a>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                <div id="ho_shad" class="services_box text_align_left">
-                   <h3>LOMITO DE SANGRECITA</h3>
-                   <figure><img src="images/MENUS/LOMITODESANGRECITA.PNG" alt="#"/></figure>
-                   <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-                   <a class="read_more" href="receta.html">Receta</a>
-                </div>
-             </div>
-             <div class="col-md-4">
-                <div id="ho_shad" class="services_box text_align_left">
-                   <h3>TALLARINES VERDES CON HIGADO DE POLLO</h3>
-                   <figure><img src="images/MENUS/TALLARINESVERDES.PNG" alt="#"/></figure>
-                   <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-                   <a class="read_more" href="receta.html">Receta</a>
-                </div>
-             </div>
-             <div class="col-md-4">
-                <div id="ho_shad" class="services_box text_align_left">
-                   <h3>SECO DE HIGADO DE POLLO</h3>
-                   <figure><img src="images/MENUS/SACODEHIGADODEPOLLO.PNG" alt="#"/></figure>
-                   <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-                   <a class="read_more" href="receta.html">Receta</a>
-                </div>
-             </div>
             </div>
          </div>
+<div class="carousel-container">
+   <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+   <div class="cards-wrapper">
+       <div class="cards-container">
+           <!-- Card 1 -->
+           <div class="card">
+               <div class="card_front">
+                   <div class="card_image" style="background-image: url('images/r.jpg');">
+                       <p class="title">Purecito Nutritivo</p>
+                   </div>
+               </div>
+               <div class="card_back">
+                   <div class="description">
+                       <div class="content">
+                           <p class="title">Ingredientes:</p>
+                           <ul class="list">
+                               <li>1 cucharada de sémola</li>
+                               <li>1 hoja de espinaca</li>
+                               <li>1/2 cucharadita de aceite vegetal</li>
+                               <li>1 rodaja delgada de zanahoria </li>
+                               <li>2 cucharadas de bazo</li>
+                               <li>12 cucharadas de caldo</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="action">
+                       <a href="PDF/PURECITONUTRITIVO.pdf" class="btn" download>Descargar Receta</a>
+                   </div>
+               </div>
+           </div>
+           <!-- Card 1 -->
+           <div class="card">
+            <div class="card_front">
+                <div class="card_image" style="background-image: url('images/SUAVECITOINFANTIL.PNG');">
+                    <p class="title">Suavecito Infantil</p>
+                </div>
+            </div>
+            <div class="card_back">
+                <div class="description">
+                    <div class="content">
+                        <p class="title">Ingredientes:</p>
+                        <ul class="list">
+                            <li>1 unidad chica de papa amarilla</li>
+                            <li>1 unidad de hígado de pollo</li>
+                            <li>1 trozo de zapallo</li>
+                            <li>1 cuharadita de aceite vegetal</li>
+                            <li>1/4 de taza de caldo</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="action">
+                    <a href="suavecitoinfantil.pdf" class="btn" download>Descargar Receta</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 1 -->
+        <div class="card">
+         <div class="card_front">
+             <div class="card_image" style="background-image: url('images/ESPECITODEAZOCONCAMOTE.PNG');">
+                 <p class="title">Especito de Bazo con Camote</p>
+             </div>
+         </div>
+         <div class="card_back">
+             <div class="description">
+                 <div class="content">
+                     <p class="title">Ingredientes:</p>
+                     <ul class="list">
+                         <li>1 rodaja gruesa de camote</li>
+                         <li>2 cucharadas de bazo</li>
+                         <li>1/8 unidad pequeña de zanahoria</li>
+                         <li>1/2 cucharadita de aceite vegetal</li>
+                         <li>2 cucharadas de caldo</li>
+                     </ul>
+                 </div>
+             </div>
+             <div class="action">
+                 <a href="especitodebazoconcamote.pdf" class="btn" download>Descargar Receta</a>
+             </div>
+         </div>
+     </div>
+     <!-- Card 1 -->
+     <div class="card">
+      <div class="card_front">
+          <div class="card_image" style="background-image: url('images/DELICIADEHIGADO.PNG');">
+              <p class="title">Delicia de Hígado</p>
+          </div>
       </div>
+      <div class="card_back">
+          <div class="description">
+              <div class="content">
+                  <p class="title">Ingredientes:</p>
+                  <ul class="list">
+                      <li>1 rodaja gruesa de zanahoria</li>
+                      <li>2 cucharadas de higado de pollo sancochado</li>
+                      <li>1/4 unidad mediana de papa amarilla sancochada</li>
+                      <li>1/2 cucharadita de aceite vegetal</li>
+                      <li>2 cucharadas de caldo</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="action">
+              <a href="receta.pdf" class="btn" download>Descargar Receta</a>
+          </div>
+      </div>
+  </div>
+  <!-- Card 1 -->
+  <div class="card">
+   <div class="card_front">
+       <div class="card_image" style="background-image: url('images/r.jpg');">
+           <p class="title">Purecito Nutritivo</p>
+       </div>
+   </div>
+   <div class="card_back">
+       <div class="description">
+           <div class="content">
+               <p class="title">Ingredientes:</p>
+               <ul class="list">
+                   <li>1 kilogramo de pescado</li>
+                   <li>1 cebolla cortada en julianas</li>
+                   <li>1 taza de caldo de pescado</li>
+                   <li>1 pizca de sal y pimienta</li>
+                   <li>10 limones</li>
+                   <li>1 ají amarillo picado</li>
+               </ul>
+           </div>
+       </div>
+       <div class="action">
+           <a href="receta.pdf" class="btn" download>Descargar Receta</a>
+       </div>
+   </div>
+</div>
+<!-- Card 1 -->
+<div class="card">
+   <div class="card_front">
+       <div class="card_image" style="background-image: url('images/r.jpg');">
+           <p class="title">Purecito Nutritivo</p>
+       </div>
+   </div>
+   <div class="card_back">
+       <div class="description">
+           <div class="content">
+               <p class="title">Ingredientes:</p>
+               <ul class="list">
+                   <li>1 kilogramo de pescado</li>
+                   <li>1 cebolla cortada en julianas</li>
+                   <li>1 taza de caldo de pescado</li>
+                   <li>1 pizca de sal y pimienta</li>
+                   <li>10 limones</li>
+                   <li>1 ají amarillo picado</li>
+               </ul>
+           </div>
+       </div>
+       <div class="action">
+           <a href="receta.pdf" class="btn" download>Descargar Receta</a>
+       </div>
+   </div>
+</div>
+<!-- Card 1 -->
+<div class="card">
+   <div class="card_front">
+       <div class="card_image" style="background-image: url('images/r.jpg');">
+           <p class="title">Purecito Nutritivo</p>
+       </div>
+   </div>
+   <div class="card_back">
+       <div class="description">
+           <div class="content">
+               <p class="title">Ingredientes:</p>
+               <ul class="list">
+                   <li>1 kilogramo de pescado</li>
+                   <li>1 cebolla cortada en julianas</li>
+                   <li>1 taza de caldo de pescado</li>
+                   <li>1 pizca de sal y pimienta</li>
+                   <li>10 limones</li>
+                   <li>1 ají amarillo picado</li>
+               </ul>
+           </div>
+       </div>
+       <div class="action">
+           <a href="receta.pdf" class="btn" download>Descargar Receta</a>
+       </div>
+   </div>
+</div>
+<!-- Card 1 -->
+<div class="card">
+   <div class="card_front">
+       <div class="card_image" style="background-image: url('images/r.jpg');">
+           <p class="title">Purecito Nutritivo</p>
+       </div>
+   </div>
+   <div class="card_back">
+       <div class="description">
+           <div class="content">
+               <p class="title">Ingredientes:</p>
+               <ul class="list">
+                   <li>1 kilogramo de pescado</li>
+                   <li>1 cebolla cortada en julianas</li>
+                   <li>1 taza de caldo de pescado</li>
+                   <li>1 pizca de sal y pimienta</li>
+                   <li>10 limones</li>
+                   <li>1 ají amarillo picado</li>
+               </ul>
+           </div>
+       </div>
+       <div class="action">
+           <a href="receta.pdf" class="btn" download>Descargar Receta</a>
+       </div>
+   </div>
+</div>
+<!-- Card 1 -->
+<div class="card">
+   <div class="card_front">
+       <div class="card_image" style="background-image: url('images/r.jpg');">
+           <p class="title">Purecito Nutritivo</p>
+       </div>
+   </div>
+   <div class="card_back">
+       <div class="description">
+           <div class="content">
+               <p class="title">Ingredientes:</p>
+               <ul class="list">
+                   <li>1 kilogramo de pescado</li>
+                   <li>1 cebolla cortada en julianas</li>
+                   <li>1 taza de caldo de pescado</li>
+                   <li>1 pizca de sal y pimienta</li>
+                   <li>10 limones</li>
+                   <li>1 ají amarillo picado</li>
+               </ul>
+           </div>
+       </div>
+       <div class="action">
+           <a href="receta.pdf" class="btn" download>Descargar Receta</a>
+       </div>
+   </div>
+</div>
+
+           <!-- Más cards -->
+           <!-- Duplicar más cards si lo deseas -->
+       </div>
+   </div>
+   <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+</div>
+
+<script>
+   let currentScrollPosition = 0;
+   const scrollAmount = 300; // La cantidad de scroll que se desplazará
+
+   function moveCarousel(direction) {
+       const container = document.querySelector('.cards-wrapper');
+       currentScrollPosition += direction * scrollAmount;
+
+       container.scrollTo({
+           left: currentScrollPosition,
+           behavior: 'smooth'
+       });
+   }
+</script>
+<style>
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+}
+
+.cards-wrapper {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.card_front,
+.card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card_front {
+    background: #fff;
+}
+
+.card_image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.945);
+    color: #eeff00;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card_back {
+    background: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.content .title {
+    font-weight: bold;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.card:hover .card_front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card_back {
+    transform: rotateY(0deg);
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+</style>
       <!-- end services -->
       <!--  footer -->
       <footer>

@@ -356,66 +356,27 @@
                      <p>inserta el nombre, edad y nivel de hemoglobina del niño</p>
                   </div>
                </div>
-                <!--cambios de seleccion segun su edad y hemoglobina-->
-                <div class="col-md-12">
-                    <div class="opciones d-flex justify-content-between">
-                          <button class="envio" onclick="seleccionarOpcion('edad')">Edad</button>
-                          <button class="envio" onclick="seleccionarOpcion('hemoglobina')">Hemoglobina</button>
-                    </div>
-                    <br>
-                    <form id="request" class="main_form">
-                            <div class="row">
-                                      <div class="col-md-12">
-                                           <input class="form_control" placeholder="Coloca aquí el Nombre" type="text" name="Name" id="nombre"> 
-                                      </div>
-                             <div class="col-md-12 edad">
-                                         <select class="form_control" name="Edad" id="edad">
-                                                       <option value="">Seleccione un rango de edad             </option>
-                                                       <option value="6-8">6-8 meses</option>
-                                                       <option value="9-11">9-11 meses</option>
-                                                       <option value="12-23">12-23 meses</option>
-                                                       <option value="24-35">24-35 meses</option>
-                                          </select>
-                              </div>
-                                      <div class="col-md-12 hemoglobina" style="display:none;">
-                                            <input class="form_control" placeholder="Nivel de Hemoglobina" type="number" name="Hemoglobina" id="hemoglobina">                          
-                                      </div>
-                                      <div class="col-md-12">
-                                            <a href="menu.html" class="envio d-flex align-content-center justify-content-center" onclick="almacenarDatos(event)">Filtrar</a>
-                                      </div>
-                            </div>
-                    </form>
-                </div>
-<!--script para dar funcionalidad a los botones-->
-    <script>
-        let opcionSeleccionada = '';
-
-        function seleccionarOpcion(opcion) {
-            opcionSeleccionada = opcion;
-            document.querySelector('.edad').style.display = 'none';
-            document.querySelector('.hemoglobina').style.display = 'none';
-            document.querySelector('.' + opcion).style.display = 'block';
-        }
-
-        function almacenarDatos(event) {
-            let Nombre = document.getElementById('nombre').value;
-            let Edad = '';
-            let HEMO = '';
-
-            if (opcionSeleccionada === 'edad') {
-                Edad = document.getElementById('edad').value;
-            } else if (opcionSeleccionada === 'hemoglobina') {
-                HEMO = document.getElementById('hemoglobina').value;
-            }
-
-            // Aquí puedes hacer lo que necesites con las variables Nombre, Edad y HEMO
-            console.log('Nombre:', Nombre);
-            console.log('Edad:', Edad);
-            console.log('HEMO:', HEMO);
-
-            // No prevenimos el evento por defecto para permitir la navegación a menu.html
-        }
-    </script>
+               <div class="col-md-12">
+                  <form id="request" class="main_form">
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <input class="form_control" placeholder="Coloca aqui el Nombre" type="type" name=" Name"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="form_control" placeholder="Edad del Niño" type="type" name="Edad"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="form_control" placeholder="Nivel de Hemoglobina" type="type" name="Hemoglobina">                          
+                        </div>
+                        <div class="col-md-12">
+                           <textarea style=" color: #d0d0cf;" class="textarea" placeholder="Message" type="type" name="message"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <a href="menus.html" class="envio d-flex align-content-center justify-content-center" >Filtrar</a>
+                        </div>
+                     </div>
+                  </form>
+               </div>
             </div>
          </div>
       </div>
