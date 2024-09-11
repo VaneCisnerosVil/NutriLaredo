@@ -517,7 +517,7 @@ button {
 }
 
 .slider_main {
-    padding: 80px 0;
+    padding: 0px 0px 80px 0px;
 }
 
 .relative {
@@ -780,14 +780,14 @@ figure img:hover{
 }
 /*pseudoclase de los botones*/
 .opciones .envio:hover{
-    background-color: #fdc001;
+    background-color: #b7d5bb;
     transition: ease-in all 0.5s;
     box-shadow: 0 0 16px 3px #635d5d38;
     color: #fff;
 }
 /*fin de la pseudoclase*/
 .main_form .envio:hover {
-    background-color: #fdc001;
+    background-color: #b7d5bb;
     transition: ease-in all 0.5s;
     box-shadow: 0 0 16px 3px #635d5d38;
     color: #fff;
@@ -1289,7 +1289,7 @@ ul.top_infomation li a:hover {
     margin-top: 90px;
     padding-top: 50px;
     padding-bottom: 50px;
-    background: #fefefd;
+    background: #2d2d2d;
 }
 
 .follow h3 {
@@ -1324,7 +1324,7 @@ ul.social_icon li a i:hover {
 }
 
 .copyright p {
-    color: #252525;
+    color: white;
     font-size: 17px;
     line-height: 22px;
     text-align: center;
@@ -1333,7 +1333,7 @@ ul.social_icon li a i:hover {
 }
 
 .copyright a {
-    color: #252525;
+    color: white;
 }
 
 .copyright a:hover {
