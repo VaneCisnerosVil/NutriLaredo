@@ -355,7 +355,7 @@
 <div class="appointment">
    <div class="container">
       <div class="row">
-         <div class="col-md-12 ">
+         <div class="col-md-12">
             <div class="titlepage text_align_center">
                <h2>REALIZA aqui tus consultas</h2>
                <p>inserta el nombre, edad o nivel de hemoglobina.</p>
@@ -369,13 +369,15 @@
             <br>
             <form id="request" class="main_form">
                <div class="row">
+                  <div class="col-md-12">
+                     <input class="form_control" placeholder="Coloca aquí el Nombre" type="text" name="Name" id="nombre">
+                  </div>
+               </div>
+               <div class="row">
                   <div class="col-md-6">
-                     <div class="col-md-12">
-                        <input class="form_control" placeholder="Coloca aquí el Nombre" type="text" name="Name" id="nombre1">
-                     </div>
-                     <div class="col-md-12 edad">
+                     <div class="edad">
                         <select class="form_control" name="Edad" id="edad">
-                           <option  value="">Seleccione un rango de edad</option>
+                           <option value="">Seleccione un rango de edad</option>
                            <option style="color: black" value="6-8">6-8 meses</option>
                            <option style="color: black" value="9-11">9-11 meses</option>
                            <option style="color: black" value="12-23">12-23 meses</option>
@@ -384,78 +386,100 @@
                      </div>
                   </div>
                   <div class="col-md-6">
-                     <div class="col-md-12">
-                        <input class="form_control" placeholder="Coloca aquí el Nombre" type="text" name="Name" id="nombre2">
-                     </div>
-                     <div class="col-md-12 hemoglobina" style="display:none;">
+                     <div class="hemoglobina">
                         <input class="form_control" placeholder="Nivel de Hemoglobina" type="number" name="Hemoglobina" id="hemoglobina">
                      </div>
                   </div>
+               </div>
+               <div class="row">
                   <div class="col-md-12">
-                     <a href="Tabla.html" class="envio d-flex align-content-center justify-content-center" onclick="almacenarDatos(event)">Filtrar</a>
+                     <a href="menu.html" class="envio d-flex align-content-center justify-content-center" onclick="almacenarDatos(event)">Filtrar</a>
                   </div>
                </div>
             </form>
          </div>
 
+         <style>
+            .edad, .hemoglobina {
+               visibility: hidden;
+               opacity: 0;
+               transition: visibility 0s, opacity 0.5s linear;
+               height: 0;
+            }
+            .edad.active, .hemoglobina.active {
+               visibility: visible;
+               opacity: 1;
+               height: auto;
+            }
+         </style>
 
-           <script>
+         <script>
             let opcionSeleccionada = 'edad';
 
-                function seleccionarOpcion(opcion) {
-                     opcionSeleccionada = opcion;
-                     document.querySelector('.edad').style.display = opcion === 'edad' ? 'block' : 'none';
-                     document.querySelector('.hemoglobina').style.display = opcion === 'hemoglobina' ? 'block' : 'none';
-                    }
+            function seleccionarOpcion(opcion) {
+               opcionSeleccionada = opcion;
+               document.querySelector('.edad').classList.toggle('active', opcion === 'edad');
+               document.querySelector('.hemoglobina').classList.toggle('active', opcion === 'hemoglobina');
+            }
 
-                     function almacenarDatos(event) {
-                              let Nombre1 = document.getElementById('nombre1').value;
-                              let Nombre2 = document.getElementById('nombre2').value;
-                              let Edad = document.getElementById('edad').value;
-                              let HEMO = document.getElementById('hemoglobina').value;
+            function almacenarDatos(event) {
+               let Nombre = document.getElementById('nombre').value;
+               let Edad = '';
+               let HEMO = '';
 
-                              // Aquí puedes hacer lo que necesites con las variables
-                              console.log('Nombre1:', Nombre1);
-                              console.log('Nombre2:', Nombre2);
-                              console.log('Edad:', Edad);
-                              console.log('HEMO:', HEMO);
-                              console.log('Opción seleccionada:', opcionSeleccionada);
+               if (opcionSeleccionada === 'edad') {
+                  Edad = document.getElementById('edad').value;
+               } else if (opcionSeleccionada === 'hemoglobina') {
+                  HEMO = document.getElementById('hemoglobina').value;
+               }
 
-                             // No prevenimos el evento por defecto para permitir la navegación a menu.html
-                     }
+               // Aquí puedes hacer lo que necesites con las variables
+               console.log('Nombre:', Nombre);
+               console.log('Edad:', Edad);
+               console.log('HEMO:', HEMO);
+               console.log('Opción seleccionada:', opcionSeleccionada);
 
-                  // Inicializar la vista
-                  seleccionarOpcion('edad');
-               </script>
-            </div>
-         </div>
+               // No prevenimos el evento por defecto para permitir la navegación a menu.html
+            }
+
+            // Inicializar la vista
+            seleccionarOpcion('edad');
+         </script>
       </div>
+   </div>
+</div>
       <!-- end appointment -->
       <!--  footer -->
       <footer>
-         <div class="footer">
+         <div class="footer ">
             <div class="container">
                <div class="row">
                   <div class="col-md-12">
-                     <div class="row">
+                     <div class="row ">
                         <div class="col-lg-6 col-md-12">
                            <div class="hedingh3 text_align_left">
                               <h3>Menu</h3>
                               <ul class="menu_footer">
-                                 <li><a href="index.html">Home</a></li>
-                                 <li><a href="about.html">About</a></li>
-                                 <li><a href="service.html">Service</a></li>
-                                 <li><a href="blog.html">Blog</a></li>
-                                 <li><a href="contact.html">Contact us</a></li>
+                                 <li><a href="index.html">Inicio</a></li>
+                                 <li><a href="nosotros.html">Acerca de</a></li>
+                                 <li><a href="menus.html">Menus</a></li>
+                                 <li><a href="nutricion.html">Tips</a></li>
+                                 <li><a href="contactanos.html">Contactanos</a></li>
+                                 <li><h3>Enlaces de interes</h3></li>
+                                 <li><a href="https://anemia.ins.gob.pe/suplementacion-con-micronutrientes-para-ninos-de-6-35-meses-de-edad">micronutrientres para niños</a></li>
+                                 <li><a href="https://www.sefap.org/2020/04/22/anemia-aportando-un-poco-de-claridad-a-tantas-cifras-y-unidades/">anemia y sus tipos</a></li>
+                                 <li><a href="https://www.essalud.gob.pe/essalud-la-libertad-inauguro-consultorios-contra-anemia-en-establecimientos-albrecht-el-porvenir-y-laredo/">consultorios de anemia</a></li>
+                                 <li><a href="https://repositorio.ucv.edu.pe/handle/20.500.12692/9833">Patrones alimenticios y su relacion con la anemia</a></li>
+                                 
                               </ul>
                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                            <div class="hedingh3  text_align_left">
-                              <h3>Newsletter</h3>
+                              <h3>BOLETIN INFORMATIVO</h3>
                               <form id="colof" class="form_subscri">
                                  <input class="newsl" placeholder="Email" type="text" name="Email">
-                                 <button class="subsci_btn">Subscribe</button>
+                                 <button class="subsci_btn d-flex align-items-center justify-content-center">Subscribete</button>
                               </form>
                               <ul class="top_infomation">
                                  <li><i class="fa fa-phone" aria-hidden="true"></i>
@@ -470,17 +494,17 @@
                      </div>
                   </div>
                </div>
-               <div class="copyright">
+            </div>
+            <div class="copyright">
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
                         <p>© 2024 Derechos reservados. IESTP LAREDO</p>
                      </div>
+                  </div>
                </div>
             </div>
          </div>
-            </div>
-         
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
