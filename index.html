@@ -347,75 +347,81 @@
       </div>
       <!-- end banner -->
       <!-- appointment -->
-      <div class="appointment">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12 ">
-                  <div class="titlepage text_align_center">
-                     <h2>HAZ consultas de Menus</h2>
-                     <p>inserta el nombre, edad y nivel de hemoglobina del niño</p>
+<div class="appointment">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12 ">
+            <div class="titlepage text_align_center">
+               <h2>REALIZA aqui tus consultas</h2>
+               <p>inserta el nombre, edad o nivel de hemoglobina.</p>
+            </div>
+         </div>
+         <div class="col-md-12">
+            <div class="opciones d-flex justify-content-between">
+               <button class="envio" onclick="seleccionarOpcion('edad')">Edad</button>
+               <button class="envio" onclick="seleccionarOpcion('hemoglobina')">Hemoglobina</button>
+            </div>
+            <br>
+            <form id="request" class="main_form">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="col-md-12">
+                        <input class="form_control" placeholder="Coloca aquí el Nombre" type="text" name="Name" id="nombre1">
+                     </div>
+                     <div class="col-md-12 edad">
+                        <select class="form_control" name="Edad" id="edad">
+                           <option  value="">Seleccione un rango de edad</option>
+                           <option style="color: black" value="6-8">6-8 meses</option>
+                           <option style="color: black" value="9-11">9-11 meses</option>
+                           <option style="color: black" value="12-23">12-23 meses</option>
+                           <option style="color: black" value="24-35">24-35 meses</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="col-md-12">
+                        <input class="form_control" placeholder="Coloca aquí el Nombre" type="text" name="Name" id="nombre2">
+                     </div>
+                     <div class="col-md-12 hemoglobina" style="display:none;">
+                        <input class="form_control" placeholder="Nivel de Hemoglobina" type="number" name="Hemoglobina" id="hemoglobina">
+                     </div>
+                  </div>
+                  <div class="col-md-12">
+                     <a href="menu.html" class="envio d-flex align-content-center justify-content-center" onclick="almacenarDatos(event)">Filtrar</a>
                   </div>
                </div>
-                <!--cambios de seleccion segun su edad y hemoglobina-->
-                <div class="col-md-12">
-                    <div class="opciones d-flex justify-content-between">
-                          <button class="envio" onclick="seleccionarOpcion('edad')">Edad</button>
-                          <button class="envio" onclick="seleccionarOpcion('hemoglobina')">Hemoglobina</button>
-                    </div>
-                    <br>
-                    <form id="request" class="main_form">
-                            <div class="row">
-                                      <div class="col-md-12">
-                                           <input class="form_control" placeholder="Coloca aquí el Nombre" type="text" name="Name" id="nombre"> 
-                                      </div>
-                             <div class="col-md-12 edad">
-                                         <select class="form_control" name="Edad" id="edad">
-                                                       <option value="">Seleccione un rango de edad             </option>
-                                                       <option value="6-8">6-8 meses</option>
-                                                       <option value="9-11">9-11 meses</option>
-                                                       <option value="12-23">12-23 meses</option>
-                                                       <option value="24-35">24-35 meses</option>
-                                          </select>
-                              </div>
-                                      <div class="col-md-12 hemoglobina" style="display:none;">
-                                            <input class="form_control" placeholder="Nivel de Hemoglobina" type="number" name="Hemoglobina" id="hemoglobina">                          
-                                      </div>
-                                      <div class="col-md-12">
-                                            <a href="menu.html" class="envio d-flex align-content-center justify-content-center" onclick="almacenarDatos(event)">Filtrar</a>
-                                      </div>
-                            </div>
-                    </form>
-                </div>
-<!--script para dar funcionalidad a los botones-->
-    <script>
-        let opcionSeleccionada = '';
+            </form>
+         </div>
 
-        function seleccionarOpcion(opcion) {
-            opcionSeleccionada = opcion;
-            document.querySelector('.edad').style.display = 'none';
-            document.querySelector('.hemoglobina').style.display = 'none';
-            document.querySelector('.' + opcion).style.display = 'block';
-        }
 
-        function almacenarDatos(event) {
-            let Nombre = document.getElementById('nombre').value;
-            let Edad = '';
-            let HEMO = '';
+           <script>
+            let opcionSeleccionada = 'edad';
 
-            if (opcionSeleccionada === 'edad') {
-                Edad = document.getElementById('edad').value;
-            } else if (opcionSeleccionada === 'hemoglobina') {
-                HEMO = document.getElementById('hemoglobina').value;
-            }
+                function seleccionarOpcion(opcion) {
+                     opcionSeleccionada = opcion;
+                     document.querySelector('.edad').style.display = opcion === 'edad' ? 'block' : 'none';
+                     document.querySelector('.hemoglobina').style.display = opcion === 'hemoglobina' ? 'block' : 'none';
+                    }
 
-            // Aquí puedes hacer lo que necesites con las variables Nombre, Edad y HEMO
-            console.log('Nombre:', Nombre);
-            console.log('Edad:', Edad);
-            console.log('HEMO:', HEMO);
+                     function almacenarDatos(event) {
+                              let Nombre1 = document.getElementById('nombre1').value;
+                              let Nombre2 = document.getElementById('nombre2').value;
+                              let Edad = document.getElementById('edad').value;
+                              let HEMO = document.getElementById('hemoglobina').value;
 
-            // No prevenimos el evento por defecto para permitir la navegación a menu.html
-        }
-    </script>
+                              // Aquí puedes hacer lo que necesites con las variables
+                              console.log('Nombre1:', Nombre1);
+                              console.log('Nombre2:', Nombre2);
+                              console.log('Edad:', Edad);
+                              console.log('HEMO:', HEMO);
+                              console.log('Opción seleccionada:', opcionSeleccionada);
+
+                             // No prevenimos el evento por defecto para permitir la navegación a menu.html
+                     }
+
+                  // Inicializar la vista
+                  seleccionarOpcion('edad');
+               </script>
             </div>
          </div>
       </div>

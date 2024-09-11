@@ -780,14 +780,14 @@ figure img:hover{
 }
 /*pseudoclase de los botones*/
 .opciones .envio:hover{
-    background-color: #fdc001;
+    background-color: #b7d5bb;
     transition: ease-in all 0.5s;
     box-shadow: 0 0 16px 3px #635d5d38;
     color: #fff;
 }
 /*fin de la pseudoclase*/
 .main_form .envio:hover {
-    background-color: #fdc001;
+    background-color: #b7d5bb;
     transition: ease-in all 0.5s;
     box-shadow: 0 0 16px 3px #635d5d38;
     color: #fff;
