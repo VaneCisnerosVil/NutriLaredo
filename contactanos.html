@@ -68,50 +68,45 @@
          </header>
          <!-- end header inner -->
       </div>
-      <!-- end banner -->
-      <!-- appointment -->
-      <div class="appointment">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12 ">
-                  <div class="titlepage text_align_center">
-                     <h2>Contact Us</h2>
-                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
-                  </div>
-               </div>
-               <div class="col-md-12">
-                  <form id="request" class="main_form">
-                     <div class="row">
-                        <div class="col-md-6 ">
-                           <input class="form_control" placeholder="Your name" type="type" name=" Name"> 
-                        </div>
-                        <div class="col-md-6">
-                           <input class="form_control" placeholder="Email" type="type" name="Email"> 
-                        </div>
-                        <div class="col-md-6">
-                           <input class="form_control" placeholder="Phone Number" type="type" name="Phone Number">                          
-                        </div>
-                        <div class="col-md-6">
-                           <input class="form_control" placeholder="Select Massage spa" type="type" name="Select">                          
-                        </div>
-                        <div class="col-md-6 ">
-                           <input class="form_control" placeholder="Time" type="type" name=" Time"> 
-                        </div>
-                        <div class="col-md-6">
-                           <input type="text" class="form_control" id="my_date_picker" placeholder="Select Date" >
-                        </div>
-                        <div class="col-md-12">
-                           <textarea style=" color: #d0d0cf;" class="textarea" placeholder="Message" type="type" name="message">message </textarea>
-                        </div>
-                        <div class="col-md-12">
-                           <button class="send_btn">Send Now</button>
-                        </div>
+<br>
+
+      <section class="contact-form">
+         <div class="form-container">
+             <div class="form-image">
+                 <img src="images/logolaredo.png" alt="Logo Cafetería">
+             </div>
+             <div class="form-content">
+                 <h2>CONTÁCTANOS</h2>
+                 <p>Si tienes alguna duda, comentario o sugerencia, puedes contactarnos y nos comunicaremos contigo lo antes posible.</p>
+                 
+                 <form action="enviar.php" method="post">
+                     <label for="nombre">Nombre completo*</label>
+                     <input type="text" id="nombre" name="nombre" required>
+ 
+                     <label for="email">Email*</label>
+                     <input type="email" id="email" name="email" required>
+ 
+                     <label for="comentarios">Comentarios(Puedes Realizar Tus Consultas)</label>
+                     <textarea id="comentarios" name="comentarios" rows="5" required></textarea>
+ 
+                     <!-- CAPTCHA simulación -->
+                     <div class="captcha">
+                         <input type="checkbox" id="captcha" required> No soy un robot
                      </div>
-                  </form>
-               </div>
-            </div>
+ 
+                     <!-- Política de privacidad -->
+                     <div class="privacy">
+                         <input type="checkbox" id="privacy" required> He leído y acepto la política de privacidad
+                     </div>
+ 
+                     <button type="submit">Enviar</button>
+                 </form>
+             </div>
          </div>
-      </div>
+     </section>
+
+     
+
       <!-- end appointment -->
       <!--  footer -->
       <footer>
@@ -191,6 +186,38 @@
             </div>
          </div>
       </footer>
+
+
+      <!-- Api para agregar el icono de whatsapp -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <a href="https://api.whatsapp.com/send?phone=51952611002&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20NutriH%2B." class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+      </a>
+      <!-- Fin de la API-->
+
+      <!-- Enlace del Chatbot-->
+      <script>
+         window.addEventListener('mouseover', initLandbot, { once: true });
+         window.addEventListener('touchstart', initLandbot, { once: true });
+         var myLandbot;
+         function initLandbot() {
+           if (!myLandbot) {
+             var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+             s.addEventListener('load', function() {
+               var myLandbot = new Landbot.Livechat({
+                 configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2601659-WRMUG5OEVK148VVQ/index.json',
+               });
+             });
+             s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+             var x = document.getElementsByTagName('script')[0];
+             x.parentNode.insertBefore(s, x);
+           }
+         }
+      </script>
+      <!--fin del enace chatbot-->
+
+
+
       <!-- end footer -->
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>

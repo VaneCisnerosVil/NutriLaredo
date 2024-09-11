@@ -1389,3 +1389,92 @@ ul.social_icon li a i:hover {
 }
 
 /*Fin del codigo CSS del icono*/
+
+/*  Formulario de contactanos*/
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    display: flex;
+    background-color: #ebebeb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 100%;
+}
+
+.form-image img {
+    width:380px;
+    height: 180px;
+    margin-top: 175px;
+    margin-right: 20px;
+}
+
+.form-content {
+    flex: 1;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+}
+
+.captcha, .privacy {
+    margin-bottom: 15px;
+}
+
+.captcha input, .privacy input {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #ff6b00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e65c00;
+}
+
+/*  fin de formualrio d eontactanos */
