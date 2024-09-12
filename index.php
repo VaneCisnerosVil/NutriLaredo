@@ -1,3 +1,11 @@
+<?php
+include ('conexion.php');
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
    <head>
@@ -367,41 +375,38 @@
                <button class="envio" onclick="seleccionarOpcion('hemoglobina')">Hemoglobina</button>
             </div>
             <br>
-            <form id="request" class="main_form">
+            <form action="Tabla.php" method="GET" id="request" class="main_form">
                <div class="row">
                   <div class="col-md-12">
-                     <input class="form_control" placeholder="Coloca aquí el Nombre" type="text" name="Name" id="nombre" required>
+                     <input class="form_control" placeholder="Coloca aquí el Nombre" type="text" name="name" id="nombre" required>
                   </div>
                </div>
                <div class="row">
                   <div class="col-md-6">
                      <div class="edad">
-                        <select class="form_control" name="Edad" id="edad" required>
+                        <select class="form_control" name="edad" id="edad" required>
                            <option value="">Seleccione un rango de edad</option>
-                           <option style="color: black" value="6-8">6-8 meses</option>
-                           <option style="color: black" value="9-11">9-11 meses</option>
-                           <option style="color: black" value="12-23">12-23 meses</option>
-                           <option style="color: black" value="24-35">24-35 meses</option>
+                           <option style="color: black" value="6-8">6 a 8 meses</option>
+                           <option style="color: black" value="9-11">9 a 11 meses</option>
+                           <option style="color: black" value="12-23">12 a 23 meses</option>
+                           <option style="color: black" value="24-35">24 a 35 meses</option>
                         </select>
                      </div>
                   </div>
                   <div class="col-md-6">
                      <div class="hemoglobina">
-                        <input class="form_control" placeholder="Nivel de Hemoglobina" type="number" name="Hemoglobina" id="hemoglobina" required>
+                        <input class="form_control" placeholder="Nivel de Hemoglobina" type="number" name="hemoglobina" id="hemoglobina" required>
                      </div>
                   </div>
                </div>
                <div class="row">
                   <div class="col-md-12">
-                     <input type="submit" class="btn btn-success" value="FILTRAR" ></input>             
+                     <input type="submit" class="btn btn-success envio d-flex align-content-center justify-content-center" value="FILTRAR" >     </input>             
                    </div>
                </div>
             </form>
          </div>
-         <?php
-            
-         ?>
-
+     
          <style>
             .edad, .hemoglobina {
                visibility: hidden;

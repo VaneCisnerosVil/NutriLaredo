@@ -1,5 +1,24 @@
+<?php
+include ('conexion.php');
+
+
+$edad = $_GET['edad'];
+
+$comida = $con->query("SELECT * FROM comidas where LIKE '%$edad%'");
+
+while ($row = $comida->fetch_assoc()) {
+     $tmp = $row;
+    // array_push($res, $tmp);
+
+ //echo $row['']
+}
+
+$con->close();
+?>
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
    <head>
       <!-- basic -->
       <meta charset="utf-8">
@@ -27,6 +46,17 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+      <style>
+        /*estilos para la tabla*/
+        tablacomida th {
+            background-color: #3D6DFA;
+            color: black;
+        }
+    </style>
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+     <link rel="" href="https://cdn.datatables.net/fixedheader/3.1.6/css/fixedHeader.dataTables.min.css">
+
    </head>
    <!-- body -->
    <body class="main-layout inner_page blog_page">
@@ -36,7 +66,7 @@
       </div>
       <!-- end loader -->
       <div class="full_bg">
-         <!-- header -->
+      <!-- header -->
          <header class="header-area">
             <div class="container">
                <div class="row d_flex">
@@ -54,7 +84,7 @@
                               <li><a href="menus.html"><b>Menús</b></a></li>
                               <li><a class="active" href="nutricion.html"><b>Tips</b></a></li>
                               <li><a href="contactanos.html"><b>Contactanos</b></a></li>
-                              <a class="active" href="Tabla.html"></a>
+                              <a class="active" href="Tabla.php"></a>
                               <!--<li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                               <li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a></li>-->
                               </ul>
@@ -67,60 +97,49 @@
                   </div>
                </div>
          </header>
-         <!-- end header inner -->
-      </div>
+      <!-- end header inner -->
       <!-- blog -->
       <div class="blog">
-         <div class="container">
+            <div class="container">
             <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage text_align_center ">
-                     <h2>¿Cómo se puede mejorar la absorción del hierro?</h2>
-                     <p>&nbsp;&nbsp;<br>Para mejorar la absorción del hierro en niños menores de 3 años, es importante considerar factores clave que optimicen la ingesta y el aprovechamiento del hierro en esta etapa crucial del desarrollo. Aquí hay algunas recomendaciones específicas:</p>
-                  </div>
-               </div>
+                <div class="col-md-12">
+                    <div class="titlepage text_align_center ">
+                        <h2>Generador de menú semanal</h2>
+                        <p>&nbsp;&nbsp;<br>Este enfoque dietético no solo promueve una adecuada ingesta de hierro, sino que también considera la interacción de nutrientes que favorecen su absorción, contribuyendo de manera integral al desarrollo óptimo del niño. Aca le presentamos una propuesta de menú semanal:</p>
+                    </div>
+                </div>
             </div>
-            <div class="row d_flex">
-               <div class=" col-md-4">
-                  <div class="latest services_box text_align_center">
-                     <figure><img src="images/tips/cafe.jpg" alt="#"/></figure>
-                   <!-- <span>16 March</span>--> 
-                     <div class="nostrud">
-                        <h3>Evitar alimentos inhibidores</h3>
-                        <p> Durante las comidas evita alimentos inhibidores de la absorción de hierro como leche, productos lácteos, té, y café contienen compuestos que pueden inhibir la absorción del hierro.
-                            Intenta no ofrecer estos productos junto con las comidas ricas en hierro.</p>
-                      <!--- <a class="read_more" href="blog.html">Read More</a>-->
-                     </div>
-                  </div>
-               </div>
-               <div class=" col-md-4">
-                  <div class="latest services_box text_align_center">
-                     <figure><img src="images/tips/vitaminac.jpg" alt="#"/></figure>
-                    <!-- <span class="yellow">17 March</span>-->
-                     <div class="nostrud">
-                        <h3>Alimentos ricos en vitamina C </h3>
-                        <p>El hierro de origen vegetal, como en cereales fortificados, 
-                           lentejas y espinacas se absorbe mejor cuando se combina con alimentos ricos en vitamina C. Frutas como las naranjas, fresas, kiwis, o vegetales como pimientos y brócoli pueden ayudar a potenciar la absorción del hierro.</p>
-                      <!-- <a class="read_more" href="blog.html">Read More</a>-->
-                     </div>
-                  </div>
-               </div>
-               <div class=" col-md-4">
-                  <div class="latest services_box text_align_center">
-                     <figure><img src="images/tips/vaca.jpg" alt="#"/></figure>
-                   <!-- <span>18 March</span>--> 
-                     <div class="nostrud">
-                        <h3>Controlar la ingesta de leche de vaca </h3>
-                        <p>En niños menores de 1 año, la leche de vaca no es recomendada, 
-                           y en los mayores de 1 año, se debe limitar a no más de 500 ml al día, ya que su consumo excesivo puede interferir con la absorción de hierro con ello aumentar el riesgo de deficiencia y siempre acude a la posta más cercana</p>
-                       <!-- <a class="read_more" href="blog.html">Read More</a>-->
-                     </div>
-                  </div>
-               </div>
+            <div>
+                <table id="tablacomidas"  style="width:70%">
+                <thead >
+                    <tr class="tableprimary ">
+                       <td><b><center>TURNOS / HORARIO</center></b></td>
+                       <td><b><center>NOMBRE DE LA RECETA</center></b></td>
+                       <td><b><center>RANGO DE EDAD</center></b></td>
+                    </tr>
+                </thead>   
+                <?php
+                foreach ($comida as $c) {
+                    ?>
+                    <tr>
+                        <td >
+                            <?php echo $c['turno']; ?>
+                        </td>
+                        <td >
+                            <?php echo $c['nombre']; ?>
+                        </td>
+                        <td>
+                            <?php echo $c['edad']; ?>
+                        </td>
+                    </tr>
+                <?php } ?>
+                </table>
             </div>
-         </div>
-      </div>
+        </div>
+<br>
+<br>
       <!-- end blog -->
+      <!--  footer -->
       <footer>
          <div class="footer ">
             <div class="container">
@@ -178,6 +197,36 @@
             </div>
          </div>
       </footer>
+      <!-- Api para agregar el icono de whatsapp -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <a href="https://api.whatsapp.com/send?phone=51952611002&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20NutriH%2B." class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+      </a>
+      <!-- Fin de la API-->
+
+      <!-- Enlace del Chatbot-->
+      <script>
+         window.addEventListener('mouseover', initLandbot, { once: true });
+         window.addEventListener('touchstart', initLandbot, { once: true });
+         var myLandbot;
+         function initLandbot() {
+            if (!myLandbot) {
+            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+            s.addEventListener('load', function() {
+               var myLandbot = new Landbot.Livechat({
+                  configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2601659-WRMUG5OEVK148VVQ/index.json',
+               });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+            }
+         }
+      </script>
+      <!--fin del enace chatbot-->
+
+
+
       <!-- end footer -->
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
@@ -188,3 +237,60 @@
       <script src="js/custom.js"></script>
    </body>
 </html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script>
+
+<script>
+    let temp = $("#btn2").clone();
+    $("#btn2").click(function(){
+        $("#btn2").after(temp);
+    });
+
+    $(document).ready(function(){
+        var table = $('#tabla22').DataTable({
+            //orderCellsTop: false,
+          //  fixedHeader: true
+        });
+     //Creamos una fila en el head de la tabla y lo clonamos para cada columna
+        $('#example22 thead tr').clone(true).appendTo( '#example22 thead' );
+
+        $('#example22 thead tr:eq(1) th').each( function (i) {
+            var title = $(this).text(); //es el nombre de la columna
+            $(this).html( '<input type="text" placeholder="Buscar...'+title+'" />' );
+
+            $( 'input', this ).on( 'keyup change', function () {
+                if ( table.column(i).search() !== this.value ) {
+                    table
+                        .column(i)
+                        .search( this.value )
+                        .draw();
+                }
+            } );
+        } );
+    });
+    
+       $(document).ready(function(){
+        var table = $('#tablacomidas').DataTable({
+            //orderCellsTop: false,
+          //  fixedHeader: true
+        });
+
+        //Creamos una fila en el head de la tabla y lo clonamos para cada columna
+         $('#example23 thead tr').clone(true).appendTo( '#example23 thead' );
+         
+        $('#example23 thead tr:eq(1) th').each( function (i) {
+            var title = $(this).text(); //es el nombre de la columna
+            $(this).html( '<input type="text" placeholder="Buscar...'+title+'" />' );
+
+            $( 'input', this ).on( 'keyup change', function () {
+                if ( table.column(i).search() !== this.value ) {
+                    table
+                        .column(i)
+                        .search( this.value )
+                        .draw();
+                }
+            } );
+        } );
+    });
