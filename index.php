@@ -3,9 +3,6 @@ include ('conexion.php');
 
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="es">
    <head>
@@ -60,12 +57,12 @@ include ('conexion.php');
                      <div class="navbar-area">
                      <nav class="site-navbar text_align_right">
                         <ul>
-                           <li><a class="active" href="index.php"><b>Inicio</b></a></li>
-                           <li><a href="nosotros.html"><b>Acerca de</b></a></li>
+                        <li><a class="active" href="index.php"><b>Inicio</b></a></li>
+                           <li><a href="nosotros.html"><b>Anemia</b></a></li>
                            <li><a href="menus.html"><b>Menús</b></a></li>
                            <li><a href="nutricion.html"><b>Tips</b></a></li>
                            <li><a href="contactanos.html"><b>Contactanos</b></a></li>
-                           <a class="active" href="Tabla.html"></a>
+                           <a class="active" href="Tabla.php"></a>
                            <!--<li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                            <li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a></li>-->
                            </ul>
@@ -367,8 +364,8 @@ include ('conexion.php');
       <div class="row">
          <div class="col-md-12">
             <div class="titlepage text_align_center">
-               <h2>REALIZA aqui tus consultas</h2>
-               <p>inserta el nombre, edad o nivel de hemoglobina.</p>
+               <h2>Realiza aqui tus consultas</h2>
+            
             </div>
          </div>
          <div class="col-md-12">
@@ -383,15 +380,24 @@ include ('conexion.php');
                      <input class="form_control" placeholder="Coloca aquí el Nombre" type="text" name="name" id="nombre" required>
                   </div>
                </div>
+               <script>
+                  function redireccionarPagina(selectObject) {
+                        var url = selectObject.value;
+                        if (url) {
+                           window.location.href = url;
+                        }
+                  }
+               </script>
+
                <div class="row">
                   <div class="col-md-6">
                      <div class="edad">
-                        <select class="form_control" name="edad" id="edad" required>
+                        <select class="form_control" id="edad" edad="Edad" onchange="redireccionarPagina(this)" required>
                            <option value="">Seleccione un rango de edad</option>
-                           <option style="color: black" value="6-8">6 a 8 meses</option>
-                           <option style="color: black" value="9-11">9 a 11 meses</option>
-                           <option style="color: black" value="12-23">12 a 23 meses</option>
-                           <option style="color: black" value="24-35">24 a 35 meses</option>
+                           <option value="6a8meses.html" style="color: black" value="6-8">6 a 8 meses</option>
+                           <option value="9a11meses.html" style="color: black" value="9-11">9 a 11 meses</option>
+                           <option value="12a23meses.html" style="color: black" value="12-23">12 a 23 meses</option>
+                           <option value="24a35meses.html" style="color: black" value="24-35">24 a 35 meses</option>
                         </select>
                      </div>
                   </div>
@@ -402,9 +408,9 @@ include ('conexion.php');
                   </div>
                </div>
                <div class="row">
-                  <div class="col-md-12">
-                     <input type="submit" class="btn btn-success envio d-flex align-content-center justify-content-center" value="FILTRAR" >     </input>             
-                   </div>
+                
+
+
                </div>
             </form>
          </div>
