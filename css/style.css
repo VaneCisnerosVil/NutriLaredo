@@ -197,7 +197,7 @@ button:focus {
 ul,
 li,
 ol {
-    margin: 0px;
+    margin: 15px;
     padding: 0px;
     list-style: none;
 }
@@ -415,7 +415,7 @@ button {
 
 .site-navbar ul li a {
     color: #363636;
-    font-size: 17px;
+    font-size: 24px;
     display: block;
     text-decoration: none;
     text-transform: uppercase;
@@ -712,8 +712,8 @@ figure img:hover{
 
 .appointment {
     background: #fdc001;
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 .appointment .titlepage p {
@@ -1160,7 +1160,7 @@ figure img:hover{
 
 .footer {
     margin-top: 0px;
-    padding-top: 90px;
+    padding-top: 32px;
     background: #2d2d2d;
     text-align: center;
 }
@@ -1261,7 +1261,7 @@ ul.menu_footer li a:hover {
 }
 
 ul.top_infomation {
-    padding-top: 20px;
+    padding-top: 0px;
 }
 
 ul.top_infomation li {
@@ -1286,9 +1286,9 @@ ul.top_infomation li a:hover {
 }
 
 .copyright {
-    margin-top: 30px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 5px;
     background: #2d2d2d;
 }
 
@@ -1306,13 +1306,13 @@ ul.social_icon li {
 }
 
 ul.social_icon li a i {
-    font-size: 17px;
+    font-size: 25px;
     color: #fff;
     transition: ease-in all 0.5s;
     background: #2d2d2d;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     border-radius: 50px;
     text-align: center;
 }

@@ -56,7 +56,7 @@ include ('conexion.php');
                   </div>
                   <div class="col-md-9 col-sm-9">
                      <div class="navbar-area">
-                     <nav class="site-navbar">
+                     <nav class="site-navbar text_align_right">
                         <ul>
                            <li><a class="active" href="index.php"><b>Inicio</b></a></li>
                            <li><a href="nosotros.html"><b>Acerca de</b></a></li>
