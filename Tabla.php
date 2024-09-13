@@ -20,6 +20,8 @@ $con->close();
 <!DOCTYPE html>
 <html lang="es">
    <head>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
       <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -146,7 +148,7 @@ $con->close();
                <div class="row">
                   <div class="col-md-12">
                      <div class="row ">
-                        <div class="col-lg-6 col-md-12">
+                        <div class="col-lg-4 col-md-4">
                            <div class="hedingh3 text_align_left">
                               <h3>Menu</h3>
                               <ul class="menu_footer">
@@ -155,23 +157,24 @@ $con->close();
                                  <li><a href="menus.html">Menus</a></li>
                                  <li><a href="nutricion.html">Tips</a></li>
                                  <li><a href="contactanos.html">Contactanos</a></li>
-                                 <li><h3>Enlaces de interes</h3></li>
-                                 <br>
-                                 <li><a href="https://anemia.ins.gob.pe/suplementacion-con-micronutrientes-para-ninos-de-6-35-meses-de-edad">micronutrientres para niños</a></li>
-                                 <li><a href="https://www.sefap.org/2020/04/22/anemia-aportando-un-poco-de-claridad-a-tantas-cifras-y-unidades/">anemia y sus tipos</a></li>
-                                 <li><a href="https://www.essalud.gob.pe/essalud-la-libertad-inauguro-consultorios-contra-anemia-en-establecimientos-albrecht-el-porvenir-y-laredo/">consultorios de anemia</a></li>
-                                 <li><a href="https://repositorio.ucv.edu.pe/handle/20.500.12692/9833">Patrones alimenticios y su relacion con la anemia</a></li>
-                                 
                               </ul>
                            </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-4 col-md-4">
+                           <div class="hedingh3 text_align_left">
+                              <h3>Enlaces de interes</h3>
+                              <ul class="menu_footer">
+                                 <ul class="menu_footer">
+                                       <li><a href="https://anemia.ins.gob.pe/suplementacion-con-micronutrientes-para-ninos-de-6-35-meses-de-edad">Micronutrientres para Niños</a></li>
+                                       <li><a href="https://www.sefap.org/2020/04/22/anemia-aportando-un-poco-de-claridad-a-tantas-cifras-y-unidades/">Anemia y sus tipos</a></li>
+                                       <li><a href="https://www.essalud.gob.pe/essalud-la-libertad-inauguro-consultorios-contra-anemia-en-establecimientos-albrecht-el-porvenir-y-laredo/">Consultorios de Anemia</a></li>
+                                       <li><a href="https://repositorio.ucv.edu.pe/handle/20.500.12692/9833">Patrones alimenticios y su relacion con la anemia</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
                            <div class="hedingh3  text_align_left">
                               <h3>BOLETIN INFORMATIVO</h3>
-                              <form id="colof" class="form_subscri">
-                                 <input class="newsl" placeholder="Email" type="text" name="Email">
-                                 <button class="subsci_btn d-flex align-items-center justify-content-center">Subscribete</button>
-                              </form>
                               <ul class="top_infomation">
                                  <li><i class="fa fa-phone" aria-hidden="true"></i>
                                     051-952611002
@@ -180,6 +183,9 @@ $con->close();
                                     <a href="Javascript:void(0)">Nutrihierro2024@gmail.com</a>
                                  </li>
                               </ul>
+                              <form id="colof" class="form_subscri"></form>
+                                 <button class="subsci_btn d-flex align-items-center justify-content-center"><a href="contactanos.html">Contactanos</a></button>
+                              </form>
                            </div>
                         </div>
                      </div>
@@ -189,6 +195,15 @@ $con->close();
             <div class="copyright">
                <div class="container">
                   <div class="row">
+                     <div class="col-md-5"></div>
+                        <div class="follow text_align_center">
+                           <ul class="social_icon ">
+                              <li><a href="https://www.facebook.com/profile.php?id=61565367856092&mibextid=ZbWKwL"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                              <li><a href="https://vm.tiktok.com/ZMhe4jPJn/"><i class="bi bi-tiktok fa" aria-hidden="true"></i></a></li>
+                              <li><a href=" https://www.instagram.com/nutrihierroplus?igsh=MWZ1ZWdhNnZibjB3dg=="><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                           </ul>
+                        </div>
+                        </div>
                      <div class="col-md-12">
                         <p>© 2024 Derechos reservados. IESTP LAREDO</p>
                      </div>
